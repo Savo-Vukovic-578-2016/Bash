@@ -2,12 +2,12 @@
 
 
 n=$(ls | wc -l)
-list=$(ls ./Music)
+list=$(ls ~/Music)
 i=0
 if [[ n -gt 0 ]];then
 	for i in ${list[*]};do
-		mpg123 -q "/home/savo/Music/$i"
-		sleep 5;
+		mpg123 -q ~/Music/$i
+		sleep 2;
 
 	done
 else
