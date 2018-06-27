@@ -15,8 +15,6 @@ while [[ true ]];do
 	if [[ -e $location/.stop ]];then
 		break
 	elif [[ -e $location/.random ]];then
-		echo $numb
-		echo $(($RANDOM % $numb))
 		mpg123 -q $location/${list[$(($RANDOM % $numb))]}
 	else
 		mpg123 -q $location/${list[$((i++))]}
